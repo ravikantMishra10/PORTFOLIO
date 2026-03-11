@@ -1,33 +1,15 @@
-import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import type { Engine } from "@tsparticles/engine";
 
 export const ParticleBackground = () => {
-const [init, setInit] = useState(false);
-
-useEffect(() => {
-const initParticles = async () => {
-const engine = {} as Engine;
-await loadSlim(engine);
-setInit(true);
-};
-
-```
-initParticles();
-```
-
-}, []);
-
-if (!init) return null;
-
 return (
 <Particles
 id="tsparticles"
 className="absolute inset-0 -z-10"
 options={{
 background: {
-color: { value: "transparent" },
+color: {
+value: "transparent",
+},
 },
 fpsLimit: 120,
 interactivity: {
@@ -58,10 +40,10 @@ width: 1,
 move: {
 direction: "none",
 enable: true,
+speed: 1,
 outModes: {
 default: "bounce",
 },
-speed: 1,
 },
 number: {
 density: {
