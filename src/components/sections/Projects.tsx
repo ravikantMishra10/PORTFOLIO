@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, BarChart2, Coffee, Recycle } from 'lucide-react';
+import { ExternalLink, BarChart2, Coffee, Recycle } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
