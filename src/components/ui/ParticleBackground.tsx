@@ -1,28 +1,33 @@
-import { useCallback } from "react";
+import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
-import { type Container, type Engine } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import type { Engine } from "@tsparticles/engine";
 
 export const ParticleBackground = () => {
-const particlesInit = useCallback(async (engine: Engine) => {
+const [init, setInit] = useState(false);
+
+useEffect(() => {
+const initParticles = async () => {
+const engine = {} as Engine;
 await loadSlim(engine);
+setInit(true);
+};
+
+```
+initParticles();
+```
+
 }, []);
 
-const particlesLoaded = useCallback(async (_container: Container | undefined) => {
-// particles loaded
-}, []);
+if (!init) return null;
 
 return (
 <Particles
 id="tsparticles"
-particlesInit={particlesInit}
-particlesLoaded={particlesLoaded}
 className="absolute inset-0 -z-10"
 options={{
 background: {
-color: {
-value: "transparent",
-},
+color: { value: "transparent" },
 },
 fpsLimit: 120,
 interactivity: {
