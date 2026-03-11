@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #020202;
+  --color-electric-blue: #00eaff;
+  --color-deep-teal: #0fb9b1;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-tilt: tilt 10s infinite linear;
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  @keyframes glow {
+    from { box-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 30px #0fb9b1; }
+    to { box-shadow: 0 0 20px #00eaff, 0 0 30px #0fb9b1, 0 0 40px #0fb9b1; }
+  }
+  @keyframes tilt {
+    0%, 50%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+  }
+}
+
+@utility glass {
+  background: rgba(2, 2, 2, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+@utility glass-hover {
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 234, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+}
+
+@utility text-glow {
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+body {
+  background-color: var(--color-midnight);
+  color: white;
+  margin: 0;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
