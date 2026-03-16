@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, Send, Github, Linkedin, Download } from 'lucide-react';
-import resumePdf from '../assets/Ravi CV.pdf';
 
 export const Contact = () => {
   return (
@@ -77,7 +76,7 @@ export const Contact = () => {
             </div>
 
             <a
-              href={resumePdf}
+              href="/Ravi CV.pdf"
               download="Ravi_Kant_Mishra_Resume.pdf"
               className="mt-8 glass glass-hover w-full py-4 rounded-xl flex items-center justify-center gap-2 font-bold text-[#00eaff] border border-[#00eaff]/30 hover:bg-[#00eaff]/10 transition-all duration-300"
             >

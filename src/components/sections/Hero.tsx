@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Download } from 'lucide-react';
-import profileImg from '../assets/profile.jpeg';
-import resumePdf from '../assets/Ravi CV.pdf';
 
 export const Hero = () => {
   return (
@@ -20,7 +18,7 @@ export const Hero = () => {
             className="w-40 h-40 md:w-56 md:h-56 mx-auto rounded-full p-1 bg-gradient-to-r from-[#00eaff] to-[#0fb9b1] shadow-[0_0_30px_rgba(0,234,255,0.3)] -mt-10 mb-4"
           >
             <img
-              src={profileImg}
+              src="/profile.jpeg"
               alt="Ravi Kant Mishra"
               className="w-full h-full object-cover rounded-full border-4 border-[#020202]"
             />
@@ -79,7 +77,7 @@ export const Hero = () => {
               LinkedIn
             </a>
             <a
-              href={resumePdf}
+              href="/Ravi CV.pdf"
               download="Ravi_Kant_Mishra_Resume.pdf"
               className="px-6 py-3 rounded-full flex items-center gap-2 font-bold bg-gradient-to-r from-[#00eaff] to-[#0fb9b1] text-black hover:shadow-[0_0_20px_rgba(0,234,255,0.5)] transition-all duration-300 transform hover:-translate-y-1"
             >
