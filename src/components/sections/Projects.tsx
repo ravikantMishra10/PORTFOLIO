@@ -11,7 +11,9 @@ export const Projects = () => {
       bullets: [
         "Revenue and booking pattern analysis",
         "Data-driven insights for decision making"
-      ]
+      ],
+      githubLink: "https://github.com/ravikantMishra10/Uber_analysis_dashboard_powerbi",
+      demoLink: "#"
     },
     {
       title: "Coffee House Analytics Dashboard",
@@ -22,7 +24,9 @@ export const Projects = () => {
         "Improved customer engagement by 40%",
         "Reduced inventory wastage by 30%",
         "Increased revenue by 18%"
-      ]
+      ],
+      githubLink: "https://github.com/ravikantMishra10/Coffee_house_dashboard",
+      demoLink: "#"
     },
     {
       title: "AI Chatbot",
