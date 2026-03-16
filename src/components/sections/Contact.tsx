@@ -92,13 +92,23 @@ export const Contact = () => {
             transition={{ duration: 0.8 }}
             className="md:col-span-3 glass p-8 rounded-2xl"
           >
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form 
+              action="https://formsubmit.co/mshrikant454@gmail.com" 
+              method="POST" 
+              className="space-y-6"
+            >
+              {/* FormSubmit Configuration (Optional) */}
+              <input type="hidden" name="_subject" value="New Portfolio Contact Submission!" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    required
                     className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#00eaff] focus:ring-1 focus:ring-[#00eaff] transition-colors"
                     placeholder="John Doe"
                   />
@@ -108,6 +118,8 @@ export const Contact = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    required
                     className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#00eaff] focus:ring-1 focus:ring-[#00eaff] transition-colors"
                     placeholder="john@example.com"
                   />
@@ -118,6 +130,8 @@ export const Contact = () => {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
+                  required
                   className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#00eaff] focus:ring-1 focus:ring-[#00eaff] transition-colors"
                   placeholder="How can I help you?"
                 />
@@ -126,7 +140,9 @@ export const Contact = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
+                  required
                   className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#00eaff] focus:ring-1 focus:ring-[#00eaff] transition-colors resize-none"
                   placeholder="Your message here..."
                 ></textarea>
