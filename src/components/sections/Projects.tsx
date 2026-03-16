@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, BarChart2, Coffee, Recycle } from 'lucide-react';
+import { ExternalLink, Github, BarChart2, Coffee, Bot } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
@@ -25,14 +25,16 @@ export const Projects = () => {
       ]
     },
     {
-      title: "Waste Management Awareness System",
-      tools: ["HTML", "CSS", "JavaScript", "Python"],
-      icon: <Recycle className="w-10 h-10 text-[#00eaff]" />,
-      desc: "Website to promote environmental awareness and better waste management.",
+      title: "AI Chatbot",
+      tools: ["Python", "Machine Learning", "NLP"],
+      icon: <Bot className="w-10 h-10 text-[#00eaff]" />,
+      desc: "Intelligent chatbot developed to understand and respond to user queries efficiently.",
       bullets: [
-        "Responsive interface",
-        "Improved user engagement toward waste management practices"
-      ]
+        "Natural Language Processing for user intent recognition",
+        "Responsive and accurate conversational agent"
+      ],
+      githubLink: "https://github.com/ravikantMishra10/AI-Chat-bot",
+      demoLink: "#"
     }
   ];
 
@@ -96,9 +98,12 @@ export const Projects = () => {
                 ))}
               </ul>
 
-              <div className="mt-auto transform translate-z-12">
-                <a href="#" className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#00eaff] transition-colors">
-                  View Project <ExternalLink size={16} />
+              <div className="mt-auto transform translate-z-12 flex gap-4">
+                <a href={project.githubLink || "#"} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#00eaff] transition-colors">
+                  <Github size={16} /> GitHub
+                </a>
+                <a href={project.demoLink || "#"} className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#00eaff] transition-colors">
+                  <ExternalLink size={16} /> Live Demo
                 </a>
               </div>
             </motion.div>

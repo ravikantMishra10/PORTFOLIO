@@ -34,7 +34,7 @@ export const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-2xl md:text-4xl font-semibold text-gray-300"
           >
-            Data Analyst | Software Engineer | B.Tech CSE (Data Science)
+            Data Science Student | Machine Learning Enthusiast | Software Developer
           </motion.h2>
 
           <motion.p
@@ -43,7 +43,7 @@ export const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl text-gray-400 max-w-3xl mx-auto"
           >
-            "Transforming data into insights and building efficient software solutions."
+            "I build data-driven applications, machine learning models, and modern web solutions."
           </motion.p>
 
           <motion.div
@@ -52,6 +52,12 @@ export const Hero = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="flex flex-wrap justify-center gap-6 pt-8"
           >
+            <a
+              href="#projects"
+              className="glass glass-hover px-6 py-3 rounded-full flex items-center gap-2 font-medium"
+            >
+              View Projects
+            </a>
             <a
               href="https://github.com/ravikantMishra10"
               target="_blank"
@@ -72,11 +78,11 @@ export const Hero = () => {
             </a>
             <a
               href="src\assets\Ravi CV.pdf"
-              download
+              download="Ravi_Kant_Mishra_Resume.pdf"
               className="px-6 py-3 rounded-full flex items-center gap-2 font-bold bg-gradient-to-r from-[#00eaff] to-[#0fb9b1] text-black hover:shadow-[0_0_20px_rgba(0,234,255,0.5)] transition-all duration-300 transform hover:-translate-y-1"
             >
               <Download size={20} />
-              Download Resume
+              Download Resume (PDF)
             </a>
           </motion.div>
         </motion.div>

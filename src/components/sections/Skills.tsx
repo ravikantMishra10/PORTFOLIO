@@ -1,22 +1,22 @@
 import { motion } from 'framer-motion';
+import { Terminal, Database, Wrench } from 'lucide-react';
 
 export const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming Languages",
-      skills: ["C++", "Python", "Java", "C", "SQL"],
+      title: "Programming",
+      icon: <Terminal className="w-6 h-6" />,
+      skills: ["Python", "Java", "C++", "JavaScript"],
     },
     {
-      title: "Tools & Platforms",
-      skills: ["Power BI", "Informatica", "ETL Tools", "Excel"],
+      title: "Data Science",
+      icon: <Database className="w-6 h-6" />,
+      skills: ["Pandas", "NumPy", "Scikit-learn", "Machine Learning", "Data Analysis"],
     },
     {
-      title: "Core Computer Science",
-      skills: ["Data Structures & Algorithms", "Operating Systems", "DBMS", "Computer Networks", "Object Oriented Programming"],
-    },
-    {
-      title: "Soft Skills",
-      skills: ["Problem Solving", "Team Collaboration", "Adaptability", "Analytical Thinking"],
+      title: "Tools",
+      icon: <Wrench className="w-6 h-6" />,
+      skills: ["Git", "GitHub", "Docker", "VS Code", "Jupyter Notebook"],
     }
   ];
 
@@ -53,7 +53,7 @@ export const Skills = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-[#00eaff] to-[#0fb9b1] mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={idx}
@@ -64,7 +64,10 @@ export const Skills = () => {
               className="glass p-6 rounded-2xl relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-[#00eaff]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <h3 className="text-xl font-semibold mb-6 text-[#00eaff] text-center">{category.title}</h3>
+              <div className="flex flex-col items-center justify-center gap-3 mb-6 text-[#00eaff]">
+                {category.icon}
+                <h3 className="text-xl font-semibold text-center">{category.title}</h3>
+              </div>
               <div className="flex flex-wrap gap-3 justify-center">
                 {category.skills.map((skill, sIdx) => (
                   <motion.span

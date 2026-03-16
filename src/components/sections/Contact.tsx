@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, Send, Github, Linkedin, Download } from 'lucide-react';
 
 export const Contact = () => {
   return (
@@ -53,15 +53,36 @@ export const Contact = () => {
 
             <div className="glass p-6 rounded-2xl flex items-center gap-4 hover:border-[#00eaff]/30 transition-colors">
               <div className="bg-[#00eaff]/10 p-4 rounded-full">
-                <MapPin className="text-[#00eaff] w-6 h-6" />
+                <Linkedin className="text-[#00eaff] w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-gray-400 text-sm font-medium mb-1">Location</h4>
-                <span className="text-white font-medium">
-                  Lovely Professional University, Punjab
-                </span>
+                <h4 className="text-gray-400 text-sm font-medium mb-1">LinkedIn</h4>
+                <a href="https://linkedin.com/in/ravikant10" target="_blank" rel="noreferrer" className="text-white font-medium hover:text-[#00eaff] transition-colors break-all">
+                  linkedin.com/in/ravikant10
+                </a>
               </div>
             </div>
+
+            <div className="glass p-6 rounded-2xl flex items-center gap-4 hover:border-[#0fb9b1]/30 transition-colors">
+              <div className="bg-[#0fb9b1]/10 p-4 rounded-full">
+                <Github className="text-[#0fb9b1] w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-gray-400 text-sm font-medium mb-1">GitHub</h4>
+                <a href="https://github.com/ravikantMishra10" target="_blank" rel="noreferrer" className="text-white font-medium hover:text-[#0fb9b1] transition-colors break-all">
+                  github.com/ravikantMishra10
+                </a>
+              </div>
+            </div>
+
+            <a
+              href="src\assets\Ravi CV.pdf"
+              download="Ravi_Kant_Mishra_Resume.pdf"
+              className="mt-8 glass glass-hover w-full py-4 rounded-xl flex items-center justify-center gap-2 font-bold text-[#00eaff] border border-[#00eaff]/30 hover:bg-[#00eaff]/10 transition-all duration-300"
+            >
+              <Download size={20} />
+              Download Resume (PDF)
+            </a>
           </motion.div>
 
           <motion.div
