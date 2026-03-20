@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, BarChart2, Coffee, Bot } from 'lucide-react';
+import { ExternalLink, Github, BarChart2, LineChart, Bot } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
@@ -16,16 +16,16 @@ export const Projects = () => {
       demoLink: "#"
     },
     {
-      title: "Coffee House Analytics Dashboard",
-      tools: ["Python", "Excel"],
-      icon: <Coffee className="w-10 h-10 text-[#0fb9b1]" />,
-      desc: "Used Python EDA to analyze purchasing patterns and visualize insights.",
+      title: "Crop Production Dashboard",
+      tools: ["Excel", "Data Analytics"],
+      icon: <LineChart className="w-10 h-10 text-[#0fb9b1]" />,
+      desc: "Interactive Excel dashboard analyzing agricultural production, yield, and seasonal trends.",
       bullets: [
-        "Improved customer engagement by 40%",
-        "Reduced inventory wastage by 30%",
-        "Increased revenue by 18%"
+        "Analyzed regional and seasonal agricultural patterns",
+        "Designed dynamic charts and KPI indicators",
+        "Supported data-driven farming decision-making"
       ],
-      githubLink: "https://github.com/ravikantMishra10/Coffee_house_dashboard",
+      githubLink: "https://github.com/ravikantMishra10/Crop_production_dashboard",
       demoLink: "#"
     },
     {
