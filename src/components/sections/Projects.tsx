@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, BarChart2, LineChart, Bot } from 'lucide-react';
+import { ExternalLink, Github, BarChart2, LineChart, Cloud } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
@@ -29,15 +29,15 @@ export const Projects = () => {
       demoLink: "#"
     },
     {
-      title: "AI Chatbot",
-      tools: ["Python", "Machine Learning", "NLP"],
-      icon: <Bot className="w-10 h-10 text-[#00eaff]" />,
-      desc: "Intelligent chatbot developed to understand and respond to user queries efficiently.",
+      title: "Cloud Cost Optimizer",
+      tools: ["Python", "AWS", "FinOps", "Data Analysis"],
+      icon: <Cloud className="w-10 h-10 text-[#00eaff]" />,
+      desc: "Cloud infrastructure cost analyzer designed to identify unused resources and provide actionable savings recommendations.",
       bullets: [
-        "Natural Language Processing for user intent recognition",
-        "Responsive and accurate conversational agent"
+        "Analyzed cloud usage patterns to identify underutilized resources",
+        "Automated cost anomaly detection and reporting"
       ],
-      githubLink: "https://github.com/ravikantMishra10/AI-Chat-bot",
+      githubLink: "https://github.com/ravikantMishra10", // Updated to default profile as exact repo name is unknown
       demoLink: "#"
     }
   ];
