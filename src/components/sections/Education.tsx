@@ -38,7 +38,7 @@ export const Education = () => {
                 <h4 className="text-xl font-bold text-white">Lovely Professional University</h4>
                 <p className="text-[#0fb9b1] font-medium mb-2">B.Tech Computer Science and Engineering</p>
                 <span className="text-sm text-gray-400 block mb-4">Aug 2023 – Present</span>
-                <p className="text-gray-300 bg-white/5 inline-block px-3 py-1 rounded-md border border-white/10">CGPA: 6.59</p>
+                <p className="text-gray-300 bg-white/5 inline-block px-3 py-1 rounded-md border border-white/10">CGPA: 6.74</p>
               </motion.div>
             </div>
 
